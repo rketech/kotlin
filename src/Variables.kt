@@ -12,7 +12,7 @@
 
 
 fun main() {
-    var name_01 = "John"       // String (Text) data type
+    val name_01 = "John"       // String (Text) data type
     val birthyear_01 = "1990" // Int (Number) Data type
 
     // Kotlin is smart enough to understand that "John" is a String (text), and that 1990 is an Int (number) variable.
