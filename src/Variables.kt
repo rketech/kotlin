@@ -22,7 +22,7 @@ fun main() {
     println(birthyear_01)      // Print the value from the birthyear variable
 
     // However, it is possible to specify the type if you insist as below:
-    var name_02: String = "Jane"
+    val name_02: String = "Jane"
     val birthyear_02: Int = 1990
 
     println("Printing data by specifying data type:")
@@ -31,7 +31,7 @@ fun main() {
 
     // You can also declare a variable without assigning the value, and assign the value later.
     // However, this is only possible when you specify the type:
-    var name_03: String // Declaring a variable specifying the data type
+    val name_03: String // Declaring a variable specifying the data type
     name_03 = "John"
     println("First Declaring a variable specifying the data type and then printing data:")
     println(name_03)
