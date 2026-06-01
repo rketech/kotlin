@@ -2,7 +2,8 @@
     Kotlin when :
     Instead of writing many if..else expressions, you can use the when expression, which is much easier to read.
 
-    It is used to select one of many code blocks to be executed:
+    It is used to select one of many code blocks to be executed.
+    The when expression is similar to the switch statement in Java.
 */
 
 fun main(){
