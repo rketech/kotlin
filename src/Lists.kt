@@ -62,7 +62,7 @@ fun main() {
     theList.forEach { item -> println("forEach() function with named parameter : $item") }
 
     // forEach internally does something conceptually like below for loop:
-    for (item in theList){
+    for (item in theList) {
         println(item)
     }
 
@@ -70,7 +70,7 @@ fun main() {
     -----------------------------------
     Size of Kotlin List :
     */
-        // We can use size property to get the total number of elements in a list:
+    // We can use size property to get the total number of elements in a list:
     println("The size of the theList is ${theList.size}")
     println("The size of the theMutableList is ${theMutableList.size}")
 
@@ -78,10 +78,30 @@ fun main() {
     -----------------------------------
     The "in" Operator :
     */
-        // The in operator can be used to check the existence of an element in a list.
+    // The in operator can be used to check the existence of an element in a list.
     if ("three" in theList) println("Is three present in theList? : " + true) else println("Is three present in theList? : " + false)
 
-        // In short we can present the above in operator code as :
-    val isPresent = "threee" in theList // is shorthand for: theList.contains("three")
-    println("Is threee present in theList? : $isPresent")
+    // In short we can present the above in operator code as :
+    var isPresent_01 = "threee" in theList // is shorthand for: theList.contains("three")
+    println("Is threee present in theList? : $isPresent_01")
+
+    /*
+    -----------------------------------
+    The contain() Method :
+        The contains() method can be used to check whether an element exists in a list.
+        NOTE: Kotlin provides the in operator, which internally calls contains()
+    */
+    if (theMutableList.contains("nine")) {
+        println(true)
+    } else {
+        println(false)
+    }
+
+    // In short we can present the above contains() function : This is cleaner and more idiomatic Kotlin.
+    val isPresent_02 = theMutableList.contains("nine") // Storing the boolean value in a variable
+    println("Is nine present in theMutableList : $isPresent_02") // Printing the result without any condition
+
+    // You don't even need the intermediate variable if you're only printing:
+    println("Is nine present in theMutableList :: ${theMutableList.contains("nine")}")
+
 }
