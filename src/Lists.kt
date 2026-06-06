@@ -144,7 +144,7 @@ fun main() {
     */
     val list_01 = listOf(1, 2, 3)
     val list_02 = listOf(4, 5, 6)
-    var list_03 = list_01 + list_02
+    val list_03 = list_01 + list_02
     println("New list_03 after list_01 + list_02 is : $list_03")
 
     /*
