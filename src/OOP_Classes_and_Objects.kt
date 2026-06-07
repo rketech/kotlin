@@ -21,9 +21,9 @@ fun main() {
     // Now we can use the class named Car to create objects.
     // In the example below, we create an object of Car called c1, and then we access the properties of c1 by using the dot syntax (.), just like we did to access array and string properties:
     // Creating an object c1 of the Car Class
-    var c1 = Car()
+    val c1 = Car()
     // Creating multiple Class object
-    var c2 = Car()
+    val c2 = Car()
 
     // Accessing the Class properties and adding value to it
     c1.brand = "Maruti"
