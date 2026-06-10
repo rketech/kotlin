@@ -1,7 +1,7 @@
-/*
-    filter()
-    map()
-    forEach()
+/* Collection Function :
+    a. filter()
+    b. map()
+    c. forEach()
 
     These three are used everywhere in:
         Jetpack Compose
