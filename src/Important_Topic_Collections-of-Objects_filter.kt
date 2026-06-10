@@ -27,10 +27,10 @@ fun main() {
     // Shorter version of the above for code
     filteredStudent_02.forEach { println(it) } // This prints just the name
 
-    var filteredStudent_03 = obj_student_02
+    obj_student_02
         .filter { it.age > 26 }
         .map { it.name }
-        .forEach { println(it) }
+        .forEach { println("**$it") }
 }
 
 /*
