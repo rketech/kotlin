@@ -1,5 +1,5 @@
 /*
-    Collections of Objects - forEach()
+    Collections of Objects - forEach() with Objects
 */
 data class Students_01(
     var name: String,
