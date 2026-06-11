@@ -46,3 +46,39 @@
 
         An object creates a single instance automatically.
 */
+
+    object MyObject{
+        var name = "Rakesh"
+    }
+
+    fun main(){
+        println(MyObject.name)
+}
+
+/*
+    Think of it as
+
+    With a class:
+
+        class Student
+
+    You create objects:
+
+        val s1 = Student()
+        val s2 = Student()
+
+    Multiple objects possible.
+
+    With an object:
+
+        object StudentManager
+
+    Kotlin creates it automatically.
+
+    There is only one:
+
+        StudentManager
+
+    for the whole app.
+*/
+
