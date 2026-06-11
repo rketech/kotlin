@@ -1,5 +1,3 @@
-import UserManager.currentUser
-
 /*
     ---------- object and Singleton Pattern -----------
     Kotlin topic that gives the biggest Android payoff is:
