@@ -141,6 +141,7 @@ sealed class Result // Only classes/objects defined inside this sealed class fil
 
         Sealed classes can.
     */
+    // Data classes can carry extra information such as error messages, user data, API responses, etc.
     data class Error(
         var message: String
     ) : Result() {
@@ -152,14 +153,35 @@ sealed class Result // Only classes/objects defined inside this sealed class fil
 } // Sealed Class Ends
 
 fun main() {
-    var result = Result.Error("Some Error Message")
+    var result = Result.Error("Internet Connection Interrupted")
     println(result) // How do I convert Loading into text?     For objects, Kotlin automatically provides a string representation.     Result:    Loading
 
     // Now let's see why Sealed Classes are useful with when.
     when (result) {
         Result.Loading -> println("...Please wait!")
         Result.Success -> println("...Data Loaded Successfully!")
-        is Result.Error -> println("...Internet Connection Interrupted")
+        is Result.Error -> println("...${result.message}") // Here is keyword is used because there can be many Error objects with different data.
     }
 } // Main Function Ends
 
+/*
+    Why Android Developers Love Sealed Classes
+
+    Suppose you're loading user data from a server.
+
+    Possible states:
+
+        Loading
+        Success(userData)
+        Error(message)
+
+    A sealed class models this perfectly:
+
+        sealed class UiState {
+            object Loading : UiState()
+            data class Success(val name: String) : UiState()
+            data class Error(val message: String) : UiState()
+        }
+
+    This is one of the most common patterns in modern Android development.
+*/
