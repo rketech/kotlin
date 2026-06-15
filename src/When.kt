@@ -20,3 +20,28 @@ fun main(){
     }
     println("The day related to $day is $result")
 }
+
+/*
+    Easy Rule to Remember
+
+    Use when(value) when comparing against specific values
+        when(menuChoice) {
+            1 -> checkBalance()
+            2 -> deposit()
+            3 -> withdraw()
+            4 -> exit()
+        }
+
+    Think:
+        menuChoice equals what?
+
+    Use when { } when evaluating conditions
+        when {
+            amount == null -> ...
+            amount <= 0 -> ...
+            amount > balance -> ...
+        }
+
+    Think:
+        Which condition is true?
+*/
