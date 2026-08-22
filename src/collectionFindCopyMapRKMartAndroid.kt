@@ -76,4 +76,47 @@ fun main() {
     println("            But")
     // Old List is unchanged.
     println("Old Age is still: ${student_1.name}'s age is ${student_1.age}")
+
+    // Now combine map() + copy()
+    // This is the important bridge to RKMart.
+
+    /*
+    map() creates a new list by processing every element of the original employees list. The original list remains unchanged.
+
+    map() iterates through each Employee object one by one. employee represents the current Employee object being processed.
+    The -> separates the lambda parameter (employee) from the action that will be performed on that object.
+
+    For every employee, we check whether employee.name is equal to "Rahul". If the condition is true, copy() creates
+    a new Employee object with the same values as the original object, except that the salary is increased by 30000.
+
+    If the name is not "Rahul", we return the original employee object. Finally, map() collects the returned result from every
+    iteration into a new list called updateSalary.
+    */
+
+    data class Employee(
+        val name: String,
+        val salary: Int
+    )
+
+    val employees = listOf(
+        Employee("John", 90000),
+        Employee("Rahul", 59000),
+        Employee("Frank", 88000),
+        Employee("Neha", 120000),
+        Employee("Alex", 150000),
+    )
+
+    val updateSalary = employees.map { employee ->
+        if (employee.name == "Rahul") {
+            employee.copy(salary = employee.salary + 30000)
+        } else {
+            employee
+        }
+    }
+
+    println("New Employee : ${updateSalary[0].name}'s salary is ${updateSalary[0].salary}")
+    println("New Employee : ${updateSalary[1].name}'s salary is ${updateSalary[1].salary}")
+    println("New Employee : ${updateSalary[2].name}'s salary is ${updateSalary[2].salary}")
+    println("New Employee : ${updateSalary[3].name}'s salary is ${updateSalary[3].salary}")
+    println("New Employee : ${updateSalary[4].name}'s salary is ${updateSalary[4].salary}")
 }
