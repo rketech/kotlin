@@ -114,9 +114,15 @@ fun main() {
         }
     }
 
+    println("Updated Salary: $updateSalary")
+    
     println("New Employee : ${updateSalary[0].name}'s salary is ${updateSalary[0].salary}")
     println("New Employee : ${updateSalary[1].name}'s salary is ${updateSalary[1].salary}")
     println("New Employee : ${updateSalary[2].name}'s salary is ${updateSalary[2].salary}")
     println("New Employee : ${updateSalary[3].name}'s salary is ${updateSalary[3].salary}")
     println("New Employee : ${updateSalary[4].name}'s salary is ${updateSalary[4].salary}")
+
+
+
 }
+
